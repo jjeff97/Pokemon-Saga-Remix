@@ -1,4 +1,3 @@
-const { response } = require('express');
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
@@ -13,7 +12,7 @@ router.get('/', (req, res) => {
     }).catch((err) => {
         console.log(err);
         res.sendStatus(500);
-    })
+    });
 });
 
 //get all types
