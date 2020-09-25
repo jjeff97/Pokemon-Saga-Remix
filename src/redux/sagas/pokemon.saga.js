@@ -6,7 +6,7 @@ function* getPokemon(action){
         const response = yield axios.get('/api/pokemon');
         yield put({
             type: "SET_POKEMON",
-            payload: response.data
+            payload: response.data,
         })
     }catch(err) {
         console.warn(err);
