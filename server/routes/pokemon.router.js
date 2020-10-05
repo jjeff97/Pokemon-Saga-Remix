@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 //get all pokemon
-router.get('/', (req, res) => {
+router.get('/', (req,res) => {
   const queryString = `SELECT * FROM pokemon`;
 
   pool
