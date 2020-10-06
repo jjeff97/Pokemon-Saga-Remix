@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 
 class Pokemon extends Component {
 
+    state = {
+        pokemon: {}
+    }
+
     componentDidMount() {
         console.log(this.props.match.params.id);
 
