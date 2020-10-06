@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 class Pokemon extends Component {
 
     componentDidMount() {
-        console.log(this.props);
-        
+        console.log(this.props.match.params.id);
+
     }
 
     render() {
