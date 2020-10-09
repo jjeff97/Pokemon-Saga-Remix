@@ -10,7 +10,24 @@ class Pokemon extends Component {
     componentDidMount() {
         console.log(this.props.match.params.id);
 
+let currentId = this.props.match.params.id;
+        let currentPokemon = {};
+    
+    for(let pokemon of this.props.store.pokemonReducer) {
+        if(currentId === pokemon.id) {
+            currentPokemon = pokemon;
+        }
     }
+this.setState(
+    {
+        pokemon: currentPokemon,
+    },
+    () => {
+        console.log(this.state.pokemon)
+    }
+    
+    )
+}
 
     render() {
         return( <div>
